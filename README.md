@@ -3,13 +3,22 @@
 ⚡️⚡️基于vitesse和arco design pro的中后台模板
 
 ✅ 支持自动导入api、components
+
 ✅ 基于 useRequest 的网络请求
+
 ✅ 本地mock数据
+
 ✅ 基于route代码块配置页面权限
+
 ✅ rich-text组件
+
 ✅ Qrcode组件
+
 ✅ Breadcrumb组件、基于route.path自动生成面包屑
-✅ IconFont支持icon font js渲染图标
+
+✅ IconFont组件支持iconfont.js渲染图标
+
+✅ 登录、注册、退出逻辑封装
 
 ## mock
 
