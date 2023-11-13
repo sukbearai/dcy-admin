@@ -1,0 +1,80 @@
+@import './markdown.css';
+
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: "思源黑体";
+  font-weight: 350;
+  src: url("../assets/font/ztcV5nJhAEFl.woff2") format("woff2"),
+  url("../assets/font/ztcV5nJhAEFl.woff") format("woff");
+  font-display: swap;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  font-family: "思源黑体" !important;
+  font-size: 14px !important;
+}
+/*
+html.dark {
+  background: #121212;
+  color-scheme: dark;
+} */
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: rgb(13,148,136);
+  opacity: 0.75;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+#aSpin{
+  --at-apply: fixed inset-x-0 inset-y-0 z-1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.05)
+}
+#aSpin .arco-spin{
+  --at-apply: fixed inset-x-0 inset-y-0 z-1001 w-20 h-6 m-auto;
+}
+
+.arco-tabs-tab-title{
+  margin: auto;
+}
+.arco-tabs-nav-ink{
+  display: none;
+}
+.arco-tabs-tab-active{
+  color: #0076F6;
+  position: relative;
+
+}
+
+.arco-tabs-tab-active::after{
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0.5rem solid;
+  border-width: 0.75rem 0.4rem;
+  border-color: transparent transparent #0076F6 transparent;
+  position: absolute;
+  left: 50%;
+  bottom: -0.5rem;
+  transform: translateX(-50%);
+}
+
+div.arco-tabs-nav::before{
+  display: none;
+}

@@ -1,0 +1,13 @@
+.DS_Store
+.vite-ssg-dist
+.vite-ssg-temp
+*.local
+dist
+dist-ssr
+node_modules
+.idea/
+*.log
+cypress/downloads
+/src/components.d.ts
+/src/auto-imports.d.ts
+*vite.config.ts.timestamp*.mjs

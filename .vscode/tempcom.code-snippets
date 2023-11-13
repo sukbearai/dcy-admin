@@ -1,0 +1,21 @@
+{
+  "Vue 3 Setup Script Component": {
+      "prefix": "component",
+      "body": [
+          "<script setup lang=\"ts\">",
+          "const name = ref('组件模版')",
+          "</script>\n",
+          "<template>",
+          "  <div class=\"wrapper\">",
+          "    {{ name }}",
+          "  </div>",
+          "</template>\n",
+          "<style scoped lang=\"less\">",
+          ".wrapper {",
+          "  --at-apply: text-left;",
+          "}",
+          "</style>"
+      ],
+      "description": "Creates a Vue 3 script setup component"
+  }
+}

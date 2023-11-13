@@ -1,0 +1,20 @@
+{
+    "git": {
+      "pushRepo": "http://git.juzycn.com:3000/dachengyun/dcy-web.git",
+      "requireBranch": "main",
+      "commitMessage": "chore: release v${version}"
+    },
+    "hooks": {
+        "before:init": ["pnpm run lint","pnpm run test:ci"],
+        "after:bump": "npx auto-changelog -p"
+    },
+    "npm": {
+      "publish": false
+    },
+    "github": {
+      "release": false,
+      "releaseName": "v${version}",
+      "tokenRef": "RELEASE_IT_GITHUB_TOKEN"
+    }
+  }
+  
