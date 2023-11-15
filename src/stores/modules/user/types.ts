@@ -1,5 +1,6 @@
 export type RoleType = '' | '*' | 'teacher' | 'student'
 export interface UserState {
+  avatar: string
   schollName: string
   schollId: string
   idcard: string

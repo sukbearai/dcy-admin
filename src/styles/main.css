@@ -15,15 +15,16 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #f2f2f2;
   font-family: "思源黑体" !important;
   font-size: 14px !important;
+  color: var(--color-text-2);
 }
-/*
+
 html.dark {
   background: #121212;
   color-scheme: dark;
-} */
+  color: #fff;
+}
 
 #nprogress {
   pointer-events: none;

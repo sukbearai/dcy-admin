@@ -2,7 +2,7 @@ import type { RouteLocationNormalized, RouteRecordRaw } from 'vue-router'
 import { useUserStore } from '~/stores'
 import type { RoleType } from '~/stores/modules/user/types'
 
-export default function usePermission() {
+export default function usePermissionRoute() {
   const userStore = useUserStore()
   return {
     accessRouter(route: RouteLocationNormalized | RouteRecordRaw) {

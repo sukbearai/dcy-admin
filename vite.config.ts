@@ -14,6 +14,8 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
 import { VueHooksPlusResolver } from '@vue-hooks-plus/resolvers'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import svgLoader from 'vite-svg-loader'
 
 // @ts-expect-error failed to resolve types
 import VueMacros from 'unplugin-vue-macros/vite'
@@ -43,9 +45,18 @@ export default defineConfig(({ command, mode }) => {
     },
 
     resolve: {
-      alias: {
-        '~/': `${path.resolve(__dirname, 'src')}/`,
-      },
+      alias: [
+        {
+          find: '~/',
+          replacement: `${path.resolve(__dirname, 'src')}/`,
+        },
+        {
+          find: 'vue',
+          replacement: 'vue/dist/vue.esm-bundler.js',
+          // compile template
+        },
+      ],
+      extensions: ['.ts', '.js'],
     },
     css: {
       preprocessorOptions: {
@@ -86,7 +97,7 @@ export default defineConfig(({ command, mode }) => {
       //       },
       //     },
       //   ],
-      // }),
+      // })
       VueMacros({
         plugins: {
           vue: Vue({
@@ -220,6 +231,10 @@ export default defineConfig(({ command, mode }) => {
 
       // https://github.com/webfansplz/vite-plugin-vue-devtools
       VueDevTools(),
+
+      vueJsx(),
+
+      svgLoader({ svgoConfig: {} }),
     ],
 
     // https://github.com/vitest-dev/vitest

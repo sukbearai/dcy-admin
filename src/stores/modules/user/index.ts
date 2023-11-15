@@ -10,10 +10,11 @@ import {
 } from '~/api/user'
 import { clearToken, setToken } from '~/utils/auth'
 import { removeRouteListener } from '~/utils/route-listener'
-import type { UserLoginData } from '~/api/login-api/login-form'
+import type { UserLoginData } from '~/api/user'
 
 const useUserStore = defineStore('user', {
   state: (): UserState => ({
+    avatar: 'https://avatars.githubusercontent.com/u/120086676?v=4',
     schollName: '',
     schollId: '',
     idcard: '',

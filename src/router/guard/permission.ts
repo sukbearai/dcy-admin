@@ -3,14 +3,12 @@ import type { RouteRecordNormalized, RouteRecordRaw, Router } from 'vue-router'
 import NProgress from 'nprogress' // progress bar
 
 import { NOT_FOUND, WHITE_LIST } from '../constants'
-import usePermission from '~/composables/useUserPermission'
-import { useAppStore, useUserStore } from '~/stores'
 
 export default function setupPermissionGuard(router: Router, routes: RouteRecordRaw[]) {
   router.beforeEach(async (to, from, next) => {
     const appStore = useAppStore()
     const userStore = useUserStore()
-    const Permission = usePermission()
+    const Permission = usePermissionRoute()
     const permissionsAllow = Permission.accessRouter(to)
     if (appStore.menuFromServer) {
       // 针对来自服务端的菜单配置进行处理

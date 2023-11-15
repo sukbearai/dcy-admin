@@ -8,7 +8,7 @@ import {
 const userStore = useUserStore()
 const router = useRouter()
 const route = useRoute()
-const permission = useUserPermission()
+const permission = usePermissionRoute()
 const tabBarStore = useTabBarStore()
 
 const tagList = computed(() => {

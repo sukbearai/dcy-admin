@@ -5,6 +5,7 @@ const emit = defineEmits(['onReady'])
 
 const route = useRoute()
 const router = useRouter()
+const { t } = useI18n()
 
 const initRoutes = [{
   path: '/',
@@ -32,14 +33,14 @@ const routes = computed(() => {
 </script>
 
 <template>
-  <div v-if="routes.length > 1" mb-4 border-0 rounded-lg bg-white p-3.5>
+  <div v-if="routes.length > 1" mb-4 border-0 rounded-lg p-3.5 class="breadcrumb">
     <a-breadcrumb>
       <template #separator>
         <icon-right />
       </template>
       <a-breadcrumb-item v-for="r in routes" :key="r.label">
         <router-link :to="r.path">
-          {{ r.label }}
+          {{ t(r.label) }}
         </router-link>
       </a-breadcrumb-item>
     </a-breadcrumb>
@@ -49,9 +50,6 @@ const routes = computed(() => {
 <style scoped>
 .breadcrumb {
   --at-apply: text-left;
-}
-:deep(.arco-breadcrumb-item-separator),
-:deep(.arco-breadcrumb-item a) {
-  color: #1a1a1a;
+  background-color: var(--color-bg-2);
 }
 </style>

@@ -7,7 +7,7 @@ const name = ref(user.userName)
 const router = useRouter()
 function go() {
   if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
+    router.push('/hi/name')
 }
 
 const { t } = useI18n()
@@ -176,7 +176,10 @@ const { chartOption: chartOptionTwo } = useChartOption((isDark) => {
 
 <route lang="yaml">
 meta:
-  layout: DefaultLayout
+  layout: SideLayout
   requiresAuth: true
   roles: ['*']
+  order: 1
+  locale: menu.index
+  icon: icon-dashboard
 </route>

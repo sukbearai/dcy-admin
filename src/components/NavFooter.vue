@@ -17,7 +17,6 @@
 .nav-footer {
   --at-apply: flex flex-col justify-center items-center;
   height: 200px;
-  background: #f2f2f2;
   color: #666;
   p{
     --at-apply: my-2;

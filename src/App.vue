@@ -44,5 +44,6 @@ const zhCN = useArcoLocale()
 <template>
   <a-config-provider :locale="zhCN">
     <router-view />
+    <global-setting />
   </a-config-provider>
 </template>

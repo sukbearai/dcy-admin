@@ -22,6 +22,7 @@
       "meta:",
       "  layout: DefaultLayout",
       "  requiresAuth: true",
+      "  roles: ['*']",
       "</route>",
       "",
       "<style lang=\"less\" scoped>",

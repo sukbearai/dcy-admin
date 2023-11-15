@@ -111,6 +111,7 @@
     "@unocss/eslint-config": "^0.52.2",
     "@unocss/preset-rem-to-px": "^0.55.7",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
     "@vue-hooks-plus/resolvers": "^1.2.4",
     "@vue-macros/volar": "^0.9.8",
     "@vue/test-utils": "^2.3.2",
@@ -151,6 +152,7 @@
     "vite-plugin-webfont-dl": "^3.7.4",
     "vite-ssg": "^0.23.0",
     "vite-ssg-sitemap": "^0.5.1",
+    "vite-svg-loader": "^4.0.0",
     "vitest": "^0.31.1",
     "vue-tsc": "^1.6.5"
   },
