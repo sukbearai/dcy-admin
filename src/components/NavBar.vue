@@ -75,7 +75,7 @@ const toggleDrawerMenu = inject('toggleDrawerMenu') as () => void
           :style="{ margin: 0, fontSize: '18px' }"
           :heading="5"
         >
-          Arco Pro
+          Arco Pro Vitesse
         </a-typography-title>
         <icon-menu-fold
           v-if="!topMenu && appStore.device === 'mobile'"

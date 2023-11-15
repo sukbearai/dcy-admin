@@ -14,6 +14,8 @@ import type { UserLoginData } from '~/api/user'
 
 const useUserStore = defineStore('user', {
   state: (): UserState => ({
+    savedName: '',
+    previousNames: [],
     avatar: 'https://avatars.githubusercontent.com/u/120086676?v=4',
     schollName: '',
     schollId: '',
@@ -37,9 +39,17 @@ const useUserStore = defineStore('user', {
     userInfo(state: UserState): UserState {
       return { ...state }
     },
+    otherNames(state: UserState) {
+      return state.previousNames.filter(name => state.savedName !== name)
+    },
   },
 
   actions: {
+    setNewName(name: string) {
+      if (this.savedName)
+        this.previousNames.push(this.savedName)
+      this.savedName = name
+    },
     switchRoles() {
       return new Promise((resolve) => {
         this.role = this.role === 'teacher' ? 'student' : 'teacher'

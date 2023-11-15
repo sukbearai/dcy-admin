@@ -23,8 +23,9 @@ meta:
   layout: SideLayout
   requiresAuth: true
   roles: ['*']
-  order: 3
+  order: 2
   locale: menu.my.data
+  icon: icon-user
 </route>
 
 <style scoped lang="less">

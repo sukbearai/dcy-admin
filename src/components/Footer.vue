@@ -2,7 +2,7 @@
 
 <template>
   <a-layout-footer class="footer">
-    Arco Pro
+    Arco Pro Vitesse
   </a-layout-footer>
 </template>
 
