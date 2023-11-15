@@ -1,4 +1,4 @@
-import cloneDeep from 'lodash/cloneDeep'
+import { cloneDeep } from 'lodash'
 import type { RouteRecordNormalized, RouteRecordRaw } from 'vue-router'
 
 import appClientMenus from '~/router/app-menus'

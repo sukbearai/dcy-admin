@@ -40,6 +40,17 @@ export default defineConfig(({ command, mode }) => {
   }
 
   return {
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            chart: ['echarts', 'vue-echarts'],
+          },
+        },
+      },
+      chunkSizeWarningLimit: 2000,
+    },
+
     server: {
       proxy,
     },
@@ -266,7 +277,11 @@ export default defineConfig(({ command, mode }) => {
 
     ssr: {
       // TODO: workaround until they support native ESM
-      noExternal: ['workbox-window', /vue-i18n/, 'echarts', 'vue-echarts', 'resize-detector', 'zrender', 'file-saver'],
+      noExternal: ['workbox-window', /vue-i18n/, 'echarts', 'vue-echarts', 'resize-detector', 'zrender', 'file-saver', 'lodash'],
+    },
+
+    legacy: {
+      buildSsrCjsExternalHeuristics: true,
     },
   }
 })
