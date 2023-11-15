@@ -18,7 +18,8 @@
     "up": "taze major -I",
     "sizecheck": "npx vite-bundle-visualizer",
     "prepare": "husky install",
-    "release": "release-it"
+    "release": "release-it",
+    "preinstall": "npx only-allow pnpm"
   },
   "commitlint": {
     "extends": [
