@@ -46,6 +46,7 @@ function setPopoverVisible() {
   refBtn.value.dispatchEvent(event)
 }
 function handleLogout() {
+  appStore.toggleTheme(false)
   logout()
 }
 function setDropDownVisible() {

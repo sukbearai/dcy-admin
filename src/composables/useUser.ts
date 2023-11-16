@@ -13,7 +13,7 @@ export default function useUser() {
       name: (logoutTo && typeof logoutTo === 'string') ? logoutTo : 'login',
       query: {
         ...router.currentRoute.value.query,
-        redirect: currentRoute.name as string,
+        redirect: currentRoute.path as string,
       },
     })
   }
