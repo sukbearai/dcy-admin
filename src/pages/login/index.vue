@@ -131,6 +131,7 @@ function onUpdateRegisterSuccess(res: boolean) {
 meta:
   requiresAuth: false
   roles: ['*']
+  hideInMenu: true
 </route>
 
 <template>

@@ -9,6 +9,7 @@ declare module 'vue-router' {
     roles?: string[]; // Controls roles that have access to the page ['*','student','teacher']
     requiresAuth: boolean; // Whether login is required to access the current page (every route must declare)
     icon?: string; // The icon show in the side menu
+    iconFont?: string; // icon from icon font
     locale?: string; // The locale name show in side menu and breadcrumb
     hideInMenu?: boolean; // If true, it is not displayed in the side menu
     hideChildrenInMenu?: boolean; // if set true, the children are not displayed in the side menu

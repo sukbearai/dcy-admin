@@ -42,6 +42,33 @@ export interface SubjectRecord {
   status: string
 }
 
+export interface VerificationSend {
+  mobile: string
+  smsTemplate: string
+}
+
+export interface ResetPassword {
+  mobile: string
+  idcard: string
+  passWord: string
+  verifyCode: string
+}
+
+export interface UserRegisterData {
+  userType: number /* 1学生 2老师 */
+  userName: string
+  mobile: string
+  idcard: string
+  passWord: string
+  schollId: string
+  professional: string
+  grade: string
+  course: string[]
+  courseId: string[]
+  professionalTitle: string
+  verifyCode: string
+}
+
 export function getSchoolList(data: PaginationData) {
   return request<SchoolData>('/dachengyun/school/getSchoolList', data)
 }
@@ -60,4 +87,16 @@ export function getJobTitleList() {
 
 export function getProfessionList() {
   return request<SubjectRecord[]>('/dachengyun/resourcehome/queryProfessionInfo')
+}
+
+export function getVerificationSend(params: VerificationSend) {
+  return request<VerificationSend[]>('/dachengyun/guest/requestVerificationCode', params, 'GET')
+}
+
+export function getResetPassWord(data: ResetPassword) {
+  return request<any>('/dachengyun/loginRegister/password/resetPassword', data)
+}
+
+export function getUserRegister(data: UserRegisterData) {
+  return request<UserRegisterData[]>('/dachengyun/guest/login/register', data)
 }

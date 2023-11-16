@@ -1,12 +1,22 @@
 <script lang="ts" setup>
+import type { RouteLocationNormalized } from 'vue-router'
+import {
+  listenerRouteChange,
+  removeRouteListener,
+} from '~/utils/route-listener'
+
 const isInit = ref(false)
 const appStore = useAppStore()
 const userStore = useUserStore()
 const router = useRouter()
 const route = useRoute()
 const permission = usePermissionRoute()
+const tabBarStore = useTabBarStore()
 useResponsive(true)
 const navbarHeight = '60px'
+const tagList = computed(() => {
+  return tabBarStore.getTabList
+})
 const navbar = computed(() => appStore.navbar)
 const renderMenu = computed(() => appStore.menu && !appStore.topMenu)
 const hideMenu = computed(() => appStore.hideMenu)
@@ -36,9 +46,12 @@ watch(
   () => userStore.role,
   (roleValue) => {
     if (roleValue && !permission.accessRouter(route))
-      router.push({ name: 'notFound' })
+      router.push({ name: 'all' })
   },
 )
+
+useResponsive(true)
+
 const drawerVisible = ref(false)
 function drawerCancel() {
   drawerVisible.value = false
@@ -48,6 +61,18 @@ provide('toggleDrawerMenu', () => {
 })
 onMounted(() => {
   isInit.value = true
+})
+
+listenerRouteChange((route: RouteLocationNormalized) => {
+  if (
+    !route.meta.noAffix
+      && !tagList.value.some(tag => tag.fullPath === route.fullPath)
+  )
+    tabBarStore.updateTabList(route)
+}, true)
+
+onUnmounted(() => {
+  removeRouteListener()
 })
 </script>
 

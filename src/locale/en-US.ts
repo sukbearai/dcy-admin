@@ -32,6 +32,8 @@ export default {
   'intro.hi': 'Hello, {name}',
   'intro.aka': 'Also known as',
   'intro.whats-your-name': 'Enter your name',
+  'hi.nest': 'This is a nest route',
+  'hi.hello': 'Hello World',
   'button.about': 'About',
   'button.back': 'Back',
   'button.go': 'Go',

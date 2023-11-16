@@ -95,9 +95,11 @@ export default defineComponent({
         if (_route) {
           _route.forEach((element) => {
             // This is demo, modify nodes as needed
-            const icon = element?.meta?.icon
-              ? () => h(compile(`<${element?.meta?.icon}/>`))
-              : null
+            const icon = element?.meta?.iconFont
+              ? () => <icon-font type={element?.meta?.iconFont} size="16" />
+              : (element?.meta?.icon
+                  ? () => h(compile(`<${element?.meta?.icon}/>`))
+                  : null)
             const node
                 // eslint-disable-next-line no-mixed-operators
                 = element?.children && element?.children.length !== 0

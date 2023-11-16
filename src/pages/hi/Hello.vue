@@ -1,9 +1,10 @@
 <script setup lang="ts">
+const { t } = useI18n()
 </script>
 
 <template>
   <div class="flex flex-col items-center py-16">
-    Hello World 🚀
+    {{ t('hi.hello') }}
   </div>
 </template>
 

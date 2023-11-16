@@ -9,7 +9,7 @@ defineProps({
     },
   },
   size: {
-    type: Number,
+    type: String,
     default() {
       return ''
     },

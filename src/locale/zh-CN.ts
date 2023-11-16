@@ -32,6 +32,8 @@ export default {
   'intro.hi': '你好，{name}',
   'intro.aka': '也叫',
   'intro.whats-your-name': '输入你的名字',
+  'hi.nest': '这是一个嵌套路由',
+  'hi.hello': '你好，世界',
   'button.about': '关于',
   'button.back': '返回',
   'button.go': '确定',

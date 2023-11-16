@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const router = useRouter()
-const route = useRoute('/hi/[name]')
+const route = useRoute()
 const user = useUserStore()
 const { t } = useI18n()
 
 watchEffect(() => {
-  user.setNewName(route.params.name)
+  user.setNewName(route.params.name as string)
 })
 </script>
 
@@ -55,4 +55,5 @@ meta:
   locale: menu.hi.name
   icon: icon-face-smile-fill
   hideInMenu: true
-  </route>
+  noAffix: true
+</route>

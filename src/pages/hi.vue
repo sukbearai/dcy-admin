@@ -14,5 +14,6 @@ meta:
   roles: ['*']
   order: 3
   locale: menu.hi
-  icon: icon-lit
+  icon: icon-list
+  iconFont: icon-a-bajiaohuangjinjinsejinpaixunzhanghuizhangwwwbirckejcn
 </route>

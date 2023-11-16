@@ -2,21 +2,25 @@
 
 ⚡️⚡️基于vitesse和arco design pro的中后台模板
 
-✅ 支持自动导入api、components
+✅ 支持自动导入api、components、详解 vite.config.js、AutoImport 配置
 
-✅ 基于 useRequest 的网络请求
+✅ 基于 vue hook plus useRequest 的网络请求
 
 ✅ 本地mock数据
 
 ✅ 基于route代码块配置页面权限
 
-✅ rich-text组件
+✅ 基于 vite-plugin-pages 自动递归渲染菜单
 
-✅ Qrcode组件
+✅ RichText 富文本组件
 
-✅ Breadcrumb组件、基于route.path自动生成面包屑
+✅ Qrcode 二维码组件
 
-✅ IconFont组件支持iconfont.js渲染图标
+✅ TabBar 标签页组件
+
+✅ Breadcrumb 面包屑组件、根据route.path自动生成
+
+✅ IconFont组件支持iconfont.js渲染图标，可以在Route代码库中配置使用
 
 ✅ 登录、注册、退出逻辑封装
 

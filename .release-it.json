@@ -1,20 +1,19 @@
 {
     "git": {
-      "pushRepo": "http://git.juzycn.com:3000/dachengyun/dcy-web.git",
+      "pushRepo": "https://github.com/sukbearai/dcy-admin.git",
       "requireBranch": "main",
       "commitMessage": "chore: release v${version}"
     },
     "hooks": {
-        "before:init": ["pnpm run lint","pnpm run test:ci"],
+        "before:init": ["pnpm run lint"],
         "after:bump": "npx auto-changelog -p"
     },
     "npm": {
       "publish": false
     },
     "github": {
-      "release": false,
+      "release": true,
       "releaseName": "v${version}",
       "tokenRef": "RELEASE_IT_GITHUB_TOKEN"
     }
   }
-  

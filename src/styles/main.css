@@ -18,13 +18,15 @@ body,
   font-family: "思源黑体" !important;
   font-size: 14px !important;
   color: var(--color-text-2);
+  background-color: var(--color-bg-2);
 }
 
 html.dark {
-  background: #121212;
-  color-scheme: dark;
+  /* background: #121212; */
+  /* color-scheme: dark; */
   color: #fff;
 }
+
 
 #nprogress {
   pointer-events: none;
