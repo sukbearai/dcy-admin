@@ -161,11 +161,11 @@ listenerRouteChange((newRoute) => {
 
 const { run: getResourceCount } = useRequest(() => getResourceNum(), {
   manual: true,
-  initialData: 0,
+  initialData: '0',
   refreshDeps: [],
-  onSuccess: (countNumber: number) => {
+  onSuccess: (countNumber: string) => {
     // data.totalCount
-    menus.value = updateCount(menus.value, '我的资源', countNumber)
+    menus.value = updateCount(menus.value, '我的资源', Number(countNumber))
   },
 })
 
