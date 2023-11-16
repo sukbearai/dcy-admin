@@ -24,6 +24,8 @@
 
 ✅ 登录、注册、退出逻辑封装
 
+<img width="1431" alt="image" src="https://github.com/sukbearai/dcy-admin/assets/120086676/d15f15f6-ca60-4f32-b508-2bbee15d64cf">
+
 ## mock
 
 ```ts
