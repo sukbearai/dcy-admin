@@ -14,6 +14,7 @@ defineOptions({
 meta:
   requiresAuth: false
   roles: ['*']
+  hideInMenu: true
 </route>
 
 <style lang="less" scoped>

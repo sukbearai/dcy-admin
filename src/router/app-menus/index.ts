@@ -1,9 +1,24 @@
+import type { RouteRecordRaw } from 'vue-router'
 import routes from '~pages'
 
-const filterMenus: string[] = ['login', 'all']
+function filterHideInMenu() {
+  function travel(_routes: RouteRecordRaw[]) {
+    return _routes.map((menu) => {
+      if (menu?.children && menu.children.length)
+        menu.children = travel(menu?.children) as RouteRecordRaw[]
 
-const appClientMenus = [...routes].filter(el => !filterMenus.includes(el.name as string)).map((el) => {
-  const { name, path, meta, redirect, children } = el
+      if (!menu?.meta?.hideInMenu)
+        return menu
+
+      return null
+    }).filter(el => el !== null)
+  }
+
+  return travel(routes)
+}
+
+const appClientMenus = [...filterHideInMenu()].map((el) => {
+  const { name, path, meta, redirect, children } = el as RouteRecordRaw
 
   return {
     name,
