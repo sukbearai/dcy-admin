@@ -125,6 +125,11 @@ function onUpdateForgetSuccess(res: boolean) {
 function onUpdateRegisterSuccess(res: boolean) {
   registerSuccess.value = res
 }
+
+function clickAgreement() {
+  if (!import.meta.env.SSR)
+    window.open('/agreement', '_blank')
+}
 </script>
 
 <route lang="yaml">
@@ -141,6 +146,7 @@ meta:
       :school-list="schoolList" :course-list="courseList" :title-list="titleList" :subject-list="subjectList"
       @login="onLogin" @send-code="onSend" @forget="onForget" @register="onRegister"
       @update-forget-success="onUpdateForgetSuccess" @update-register-success="onUpdateRegisterSuccess"
+      @click-agreement="clickAgreement"
     >
       <template #logo>
         <span i-dcy:logo style="font-size: 27px;" />

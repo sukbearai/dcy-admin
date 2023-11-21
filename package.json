@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.52.0",
-    "@dcyjs-materials/login-page": "^0.1.17",
+    "@dcyjs-materials/login-page": "^0.1.18",
     "@dcyjs-materials/the-header": "^0.1.9",
     "@svgdotjs/svg.js": "^3.2.0",
     "@types/mockjs": "^1.0.7",
