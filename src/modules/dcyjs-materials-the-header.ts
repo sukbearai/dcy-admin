@@ -4,10 +4,6 @@ import { type UserModule } from '~/types'
 
 export const install: UserModule = async ({ isClient, app }) => {
   if (isClient) {
-    const LoginPage = (await import('@dcyjs-materials/login-page')).default
-    // 登录组件
-    app.component('LoginPage', LoginPage)
-
     const TheHeader = (await import('@dcyjs-materials/the-header')).default
     // 导航栏
     app.component('TheHeader', TheHeader)

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useArcoLocale } from './modules/lang'
+import { useArcoLocale } from './modules/arco-design-lang'
 import { addEventListen } from './utils/event'
 
 // https://github.com/vueuse/head

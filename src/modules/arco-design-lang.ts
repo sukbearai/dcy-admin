@@ -9,9 +9,8 @@ import { type UserModule } from '~/types'
 const zhCN = ref<any>(null)
 
 export const install: UserModule = async ({ isClient }) => {
-  if (!isClient)
-    return
-  zhCN.value = (await import('@arco-design/web-vue/es/locale/lang/zh-cn')).default
+  if (isClient)
+    zhCN.value = (await import('@arco-design/web-vue/es/locale/lang/zh-cn')).default
 }
 
 export function useArcoLocale() {
