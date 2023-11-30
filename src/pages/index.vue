@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Editor from '@tinymce/tinymce-vue'
+
 defineOptions({
   name: 'IndexPage',
 })
@@ -111,6 +113,25 @@ const { chartOption: chartOptionTwo } = useChartOption((isDark) => {
 
 <template>
   <div class="flex flex-col items-center py-16">
+    <div class="mb-4">
+      <Editor
+        api-key="hrmrb9qlwaatmd663ipwubv3bm5elgxsf39xt0xd1q7c2jlj"
+        initial-value="Welcome to TinyMCE， 一个支持 MathType 的编辑器！"
+        :init="{
+          height: 500,
+          tinycomments_mode: 'embedded',
+          tinycomments_author: 'Author name',
+          mergetags_list: [
+            { value: 'First.Name', title: 'First Name' },
+            { value: 'Email', title: 'Email' },
+          ],
+          toolbar_mode: 'sliding',
+          plugins: 'tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
+          external_plugins: { tiny_mce_wiris: 'https://www.wiris.net/demo/plugins/tiny_mce/plugin.js' },
+          toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat | tiny_mce_wiris_formulaEditor | tiny_mce_wiris_formulaEditorChemistry',
+        }"
+      />
+    </div>
     <div class="w-full flex justify-center">
       <Chart width="110px" height="110px" :option="chartOptionOne" />
       <Chart width="110px" height="110px" :option="chartOptionTwo" />

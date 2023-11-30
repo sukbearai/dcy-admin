@@ -62,6 +62,7 @@
     "@dcyjs-materials/login-page": "^0.1.19",
     "@dcyjs-materials/the-header": "^0.1.9",
     "@svgdotjs/svg.js": "^3.2.0",
+    "@tinymce/tinymce-vue": "^4",
     "@types/mockjs": "^1.0.7",
     "@unhead/vue": "^1.1.27",
     "@unocss/reset": "^0.52.2",

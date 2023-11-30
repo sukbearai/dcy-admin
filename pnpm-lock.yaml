@@ -17,6 +17,9 @@ dependencies:
   '@svgdotjs/svg.js':
     specifier: ^3.2.0
     version: 3.2.0
+  '@tinymce/tinymce-vue':
+    specifier: ^4
+    version: 4.0.7(vue@3.3.4)
   '@types/mockjs':
     specifier: ^1.0.7
     version: 1.0.7
@@ -3215,6 +3218,15 @@ packages:
     dependencies:
       defer-to-connect: 2.0.1
     dev: true
+
+  /@tinymce/tinymce-vue@4.0.7(vue@3.3.4):
+    resolution: {integrity: sha512-1esB8wGWrjPCY+rK8vy3QB1cxwXo7HLJWuNrcyPl6LOVR+QJjub0OiV/C+TUEsLN6OpCtRv+QnIqMC5vXz783Q==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      tinymce: 5.10.9
+      vue: 3.3.4
+    dev: false
 
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -12520,6 +12532,10 @@ packages:
   /tinybench@2.5.0:
     resolution: {integrity: sha512-kRwSG8Zx4tjF9ZiyH4bhaebu+EDz1BOx9hOigYHlUW4xxI/wKIUQUqo018UlU4ar6ATPBsaMrdbKZ+tmPdohFA==}
     dev: true
+
+  /tinymce@5.10.9:
+    resolution: {integrity: sha512-5bkrors87X9LhYX2xq8GgPHrIgJYHl87YNs+kBcjQ5I3CiUgzo/vFcGvT3MZQ9QHsEeYMhYO6a5CLGGffR8hMg==}
+    dev: false
 
   /tinypool@0.5.0:
     resolution: {integrity: sha512-paHQtnrlS1QZYKF/GnLoOM/DN9fqaGOFbCbxzAhwniySnzl9Ebk8w73/dd34DAhe/obUbPAOldTyYXQZxnPBPQ==}
