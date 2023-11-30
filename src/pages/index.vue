@@ -5,6 +5,8 @@ defineOptions({
   name: 'IndexPage',
 })
 
+const richText = ref('Welcome to TinyMCE， 一个支持 MathType 的编辑器！')
+
 // 图表渲染
 const { chartOption: chartOptionOne } = useChartOption((isDark) => {
   return {
@@ -115,9 +117,10 @@ const { chartOption: chartOptionTwo } = useChartOption((isDark) => {
   <div class="flex flex-col items-center py-16">
     <div class="mb-4">
       <Editor
+        v-model="richText"
         api-key="hrmrb9qlwaatmd663ipwubv3bm5elgxsf39xt0xd1q7c2jlj"
-        initial-value="Welcome to TinyMCE， 一个支持 MathType 的编辑器！"
         :init="{
+          language: 'zh_CN',
           height: 500,
           tinycomments_mode: 'embedded',
           tinycomments_author: 'Author name',
@@ -131,6 +134,10 @@ const { chartOption: chartOptionTwo } = useChartOption((isDark) => {
           toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat | tiny_mce_wiris_formulaEditor | tiny_mce_wiris_formulaEditorChemistry',
         }"
       />
+    </div>
+    <div class="mb-4 flex">
+      渲染公式：
+      <div v-html="richText" />
     </div>
     <div class="w-full flex justify-center">
       <Chart width="110px" height="110px" :option="chartOptionOne" />
